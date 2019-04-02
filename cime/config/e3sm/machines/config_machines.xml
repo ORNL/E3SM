@@ -3090,6 +3090,13 @@
       <env name="HDF5_PATH">$ENV{OLCF_HDF5_ROOT}</env>
       <env name="PNETCDF_PATH">$ENV{OLCF_PARALLEL_NETCDF_ROOT}</env>
     </environment_variables>
+
+    <environment_variables compiler="gnu" mpilib="mpi-serial">
+    <env name="HDF5_PATH">/gpfs/alpine/cli115/world-shared/e3sm/tools/hdf5-serial/</env>
+    <env name="NETCDF_C_PATH">/gpfs/alpine/cli115/world-shared/e3sm/tools/netcdf-serial/</env>
+    <env name="NETCDF_FORTRAN_PATH">/gpfs/alpine/cli115/world-shared/e3sm/tools/netcdf-fortran-serial/</env>
+    <env name="LD_LIBRARY_PATH">/gpfs/alpine/cli115/world-shared/e3sm/tools/netcdf-fortran-serial/lib:/gpfs/alpine/cli115/world-shared/e3sm/tools/netcdf-serial/lib:/gpfs/alpine/cli115/world-shared/e3sm/tools/hdf5-serial/lib:$ENV{LD_LIBRARY_PATH}</env>
+    </environment_variables>
   </machine>
 
   <default_run_suffix>
